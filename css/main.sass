@@ -1,0 +1,669 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Rubik', sans-serif
+.container
+    width: 1200px
+    margin: 0 auto
+
+=text-poperty($color, $fw)
+    color: $color
+    font-size: 14px
+    font-weight: $fw
+li
+    list-style: none
+    a
+        color: #333333
+        text-decoration: none
+.buy-button
+    width: 209px
+    background: #D82F14
+    background-image: url('/img/Path 608.png')
+    background-repeat: no-repeat
+    background-position: 21px
+    height: 45px
+    color: white
+    cursor: pointer
+    border: none
+    transition: 0.3s
+    &:focus
+        outline: none
+    &:hover
+        background-color: tomato
+header
+    background: #333333
+    height: 32px
+    display: flex
+    align-items: center
+    top: 0
+    position: fixed
+    z-index: 20
+    width: 100%
+    .container
+        display: flex
+        align-items: center
+        .header__contact
+            flex-grow: 1
+            display: flex
+            .header__phone
+                display: flex
+                align-items: center
+                img
+                    margin-right: 8px
+                    width: 14px
+                    height: 14px
+            .header__email
+                display: flex
+                align-items: center
+                img
+                    margin-right: 8px
+                    width: 14px
+                    height: 10px
+            p, a
+                +text-poperty(white, 300)
+                margin-right: 16px
+                text-decoration: none
+                &:hover
+                    color: #f0f0f0
+        .header__authorization
+            display: flex
+            .stick
+                width: 1px
+                height: 17px
+                background: white
+                margin: 0 10px
+            a
+                +text-poperty(white, 300)
+                text-decoration: none
+                transition: 0.2s
+                &:hover
+                    color: #f0f0f0
+
+.menu
+    margin-top: 32px
+    top: 0
+    position: fixed
+    width: 100%
+    z-index: 20
+    background: white
+    .container 
+        height: 96px
+        display: flex
+        align-items: center
+        .logo
+            flex-grow: 1
+        nav
+            ul
+                display: flex
+                li
+                    margin-right: 29px
+                    list-style: none
+                    font-weight: 500
+                    a
+                        text-decoration: none
+                        +text-poperty(#333333, 500)
+                        text-transform: uppercase
+                        transition: 0.2s
+                        &:hover
+                            color: tomato
+                        &:active
+                            color: black   
+.search
+    margin-top: 127px
+    height: 127px
+    background: #244690
+    display: flex
+    align-items: center
+    .container
+        display: flex
+        align-items: center
+        nav.dropDownMenu
+            user-select: none
+            position: absolute
+            margin-top: 125px
+            background: #000
+            width: 306px
+            display: none
+            ul
+                li
+                    background: #437C90
+                    padding: 10px
+                    border-bottom: 1px solid black
+                    text-align: center
+                    transition: 0.3s
+                    cursor: pointer
+                    a
+                        color: #f0f0f0
+                    &:hover
+                        background: #f0f0f0
+                        a
+                            color: black
+        
+        .catalog
+            a
+                text-decoration: none
+                color: white
+            cursor: pointer
+            user-select: none
+            background: #D82F14
+            width: 306px
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            p
+                margin: 0 20px 0 30px
+                +text-poperty(white, regular)
+                font-size: 18px
+            .burger
+                width: 26px
+                height: 20px
+                div
+                    width: 100%
+                    height: 2px
+                    background: white
+                    border-radius: 3px
+                    &:nth-child(2)
+                        margin: 6px 0
+        .search-panel
+            margin-left: 77px
+            margin-right: 95px
+            background: white
+            display: flex
+            height: 50px
+            input
+                width: 328px
+                padding: 15px 30px
+                &:focus
+                    outline: 2px solid #29B0D9
+                    background: #ffe
+            div
+                width: 92px
+                button
+                    width: 100%
+                    height: 100%
+                    border: none
+                    background: white
+                    cursor: pointer
+                    &:focus
+                        outline: none
+        .catalog-items
+            display: flex
+            align-items: flex-end
+            .item
+                height: 55px
+                justify-content: space-between
+                a
+                    text-decoration: none
+                    color: white
+                    &:active
+                        color: black
+                display: flex
+                flex-direction: column
+                align-items: center
+                +text-poperty(white, 300)
+                transition: 0.2s
+                cursor: pointer
+                &:nth-child(2)
+                    margin: 0 45px
+                &:hover
+                    background: #2aB0D9
+                    border-radius: 5px
+                img
+                    // margin-bottom: auto
+                    width: 28px
+                    height: 26px
+        
+
+main
+    .container
+        .choose
+            margin-top: 26px
+            display: flex
+            .arrow
+                display: flex
+                align-items: center
+            img
+
+                margin: 0 10px
+            a
+                color: #333333
+                text-decoration: none
+                &:hover
+                    color: black
+                &:active
+                    color: white
+    .buy-warpper
+        display: flex
+        margin-top: 25px
+        button
+            height: 45px
+        .slider
+            user-select: none
+            max-width: 587px
+            // overflow-y: hidden
+            .main-slide
+                border: 1px solid #707070
+                margin-bottom: 27px
+                cursor: pointer
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 440px
+                width: 587px
+            .prev-next-btns
+                position: relative
+                p
+                    font-size: 32px
+                    position: absolute
+                    margin-top: 40px
+                    cursor: pointer
+                    z-index: 19
+                    user-select: none
+                    &:hover
+                        background: #f0f0f0
+                .nextSlide
+                    left: 96.5%
+                .prevSlide
+                    right: 96.5%
+            .wrapper-slides
+                overflow: hidden
+                .slides
+                    display: -webkit-box
+                    position: relative
+                    
+                    .slide
+                        margin-left: 25px
+                        width: 179px
+                        height: 137px
+                        border: 1px solid #707070
+                        cursor: pointer
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        img
+                            width: 80%
+                    
+        #buy-item
+            margin-left: 10px
+            h2
+                +text-poperty(#333333, 500)
+                font-size: 26px
+            .price
+                margin-bottom: 25px
+                span
+                    +text-poperty(#333333, 500)  
+                    font-size: 26px     
+            .code
+                margin: 10px 0 50px 0
+            .buttons-buy
+                display: flex
+                button
+                    font-size: 16px
+                    color: white
+                    border: none
+                    cursor: pointer
+                .like-law
+                    display: flex
+                .fast-buy-button
+                    margin-left: 23px
+                    padding-left: 13px
+                    width: 209px
+                    background: #244690
+                    background-image: url('/img/Group 332.png')
+                    background-repeat: no-repeat
+                    background-position: 15px
+                    transition: 0.3s
+                    &:hover
+                        background-color: #112655
+                .like-button, .law-button
+                    display: flex
+                    justify-content: center
+                    width: 45px
+                    height: 45px
+                    background: #707070
+                    transition: 0.3s
+                    margin-left: 30px
+                    &:hover
+                        background: black
+                .like-button
+                    // margin: 0 24px 0 28px
+            .tabContent
+                margin-top: 30px
+
+            .hide
+                display: none
+            .show
+                display: block
+            
+        .buy-info
+            margin-top: 70px
+            display: flex
+            p
+                font-size: 18px
+                color: #333333
+                padding-bottom: 11px
+                border-bottom: 1px solid #707070
+                text-align: center
+                padding: 0 35px 10px 40px
+                transition: 0.3s
+                cursor: pointer
+                user-select: none
+                &:hover
+                    color: #bc1414
+                &:active
+                    color: black
+            .buy-active
+                border-bottom: 2px solid #244690 
+        .buy-description
+            margin-top: 31px
+            font-size: 18px
+            color: #333333
+        .adv-info
+            display: flex
+            margin-top: 20px
+            transition: 0.3s
+            p
+                &:nth-child(2)
+                    margin-left: 60px
+                &:hover
+                    color: grey
+    .product-info-btns
+        margin-top: 60px
+        .tabs-des
+            border: 1px solid #707070
+            display: flex
+            .tab1
+                user-select: none
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 60px
+                transition: 0.3s
+                cursor: pointer
+                &:nth-child(1)
+                    width: 180px
+                &:nth-child(2)
+                    width: 220px
+                &:nth-child(3)
+                    width: 202px
+                &:nth-child(4)
+                    width: 202px
+                &:nth-child(5)
+                    width: 222px
+                &:nth-child(6)
+                    width: 180px 
+                    p
+                        border-right: none
+                p
+                    border-right: 1px solid #707070 
+                    width: 100%   
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 30px
+            .tab1:hover
+                background: #707070
+                color: white
+            .tab1.tab1-active
+                background: #707070
+                color: white
+            .instruction
+                img
+                    margin-left: 5px
+    .info-box
+        font-size: 18px
+        p
+            margin: 10px 0
+            
+.products
+    .container
+        h1
+            text-align: center
+            margin-bottom: 30px
+            margin-top: 80px
+    .products-list
+        display: flex
+        justify-content: space-between
+        .product
+            height: 440px
+            text-align: center
+            border: 1px solid #E5E5E5
+            width: 280px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            justify-content: flex-end
+            transition: 0.3s
+            &:hover
+                background: #E7F0FF
+            a
+                text-decoration: none
+                color: #333333
+            p
+            .top
+                position: relative
+                width: 244px
+                margin: 0
+                img
+                    top: 10px
+                    bottom: 0
+                    right: 190px
+                    position: absolute
+                    width: 63px
+                    height: 58px
+            .price
+                font-weight: 500
+                font-size: 22px
+                margin-top: 30px
+            img
+                margin-top: 40px
+                margin-bottom: 40px
+                width: 200px
+                height: 180px
+                border-radius: 10px
+        button
+            margin-top: 30px
+footer
+    background: #F2F2F2
+    height: 200px
+    display: flex
+    align-items: center
+    margin-top: 140px
+    .container
+        font-size: 14px
+        display: flex
+        align-items: flex-start
+        nav
+            display: flex
+            ul
+                margin-left: 70px
+                &:nth-child(2)
+                    margin-left: 40px
+                li
+                    list-style: none
+                    margin-bottom: 15px
+                    a
+                        text-decoration: none
+                        color: #333333
+                        text-transform: uppercase
+                        &:hover
+                            color: #244690
+                        &:active
+                            color: black
+        .logo
+            img
+                margin-bottom: 30px
+            .curse
+                display: flex
+                p
+                    &:nth-child(2)
+                        margin-left: 30px
+                    span
+                        font-weight: 500
+        .contacts
+            margin-left: 70px
+            p
+                margin-bottom: 15px
+                a
+                    color: #333333
+                    text-decoration: none
+        .footer-form
+            margin-left: 55px
+            p
+                margin-bottom: 13px
+            input
+                height: 36px
+                width: 180px
+                margin-bottom: 23px
+            button
+                width: 100px
+                height: 35px
+                border: none
+                background: #244690
+                color: white      
+            img
+                margin-right: 17px
+
+@media screen and (max-width: 576px)
+    .container
+        width: 95%
+    header
+        position: relative
+        width: 100%
+        display: flex
+        .container
+            justify-content: flex-end
+            .header__contact
+                display: none
+    .menu
+        position: relative
+        margin-top: 0
+        .container
+            nav
+                display: none
+            .buy-wrapper
+                justify-content: center
+                align-items: center
+                width: 60%
+                        
+    .search
+        height: 250px
+        width: 100%
+        margin-top: 0
+        .container
+            flex-direction: column
+            flex-direction: column-reverse
+            .search-panel
+                margin: 20px 0
+                width: 90%
+            .dropDownMenu
+                top: 229px
+
+    main
+        width: 100%
+        .container
+            .buy-warpper
+                flex-direction: column
+                #buy-item
+                    margin-left: 0
+                    margin-top: 10px
+                    .buy-info
+                        margin-top: 30px
+                        display: flex
+                        flex-direction: column
+                        p
+                            padding: 10px
+                    .buttons-buy
+                        .btn1
+                            text-align: center
+                            margin-bottom: 20px
+                        flex-direction: column
+                        align-items: center
+                        display: flex
+                        justify-content: center
+                        .buy-button, .fast-buy-button
+                            width: 70%
+                            background-image: none
+                            text-align: center
+                            margin: 0
+                        .fast-buy-button
+                            margin-top: 10px
+                        .like-button,
+                            margin: 0
+                        .like-button, .law-button
+                        .law-button
+                            margin-left: 10px
+                    h2
+                        font-size: 24px
+                        text-align: center
+                    p
+                        text-align: center
+                    .code
+                        margin-top: 20px
+                        margin-bottom: 20px
+                .slider
+                    width: 100%
+                    .main-slide
+                        width: 100%
+                        img
+                            width: 100%
+                .wrapper-slides
+                    width: 100%
+                    .slides
+                        width: 100%
+                        .slide
+                            width: 50%
+                            margin: 0
+                            
+            .tabContent
+                text-align: center
+            .product-info-btns
+            .info-box
+                font-size: 16px
+                p
+                    width: 100%
+                    word-wrap: break-word
+                    background: #f0f0f0
+                    border-radius: 5px
+                    
+            .tabs-des
+                display: flex
+                flex-direction: column
+                .tab1
+                    width: 100% !important
+        .choose
+            justify-content: center
+            font-size: 12px
+    .products
+        .container
+            .products-list
+                flex-direction: column
+                align-items: center
+                .product
+                    margin-top: 10px
+    footer
+        margin-top: 30px
+        height: 570px
+        .container
+            flex-direction: column
+            align-items: center
+            .logo
+                text-align: center
+                margin-bottom: 20px
+            nav
+                margin-bottom: 20px
+                ul
+                    margin: 0
+            .contacts
+                margin: 0
+                text-align: center
+            .footer-form
+                margin: 0
+                text-align: center
+                width: 100%
+            .socials
+                text-align: center
